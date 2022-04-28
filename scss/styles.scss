@@ -1,32 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+*{margin:0;
+padding: 0;
+font-family: sans-serif;}
 
-}
-
-:root{
-    --gold1: #f4bd76;
-    --gold2: #f6cd8f;
-    --gray: #ffffff80;
-    --gray2: #f7d9d990;
-    --black1: #1a1b1f;
-    --black2: #30353b;
-    --shadow: 0px 8px 8px;
-    --color_shadow:#00000033;
-
-
-}
-    
-
-
-
-
-
-
-
-
-
+$gold-1:#f4bd76;
+$gold-2:#f6cd8f;
+$gray: #ffffff80;
+$gray2: #f7d9d990;
+$black1: #1a1b1f;
+$black2: #30353b;
+$shadow: 0px 8px 8px;
+$color_shadow:#00000033;
 
 
 #grilla{
@@ -34,114 +17,100 @@
     grid-template-areas: 
     "header"
     "section"
-    "footer"
-    ;
+    "footer";
     grid-template-rows: 100px auto 100px;
-    grid-template-columns: auto ;
+    grid-template-columns: auto;
     height: 100vh;
 }
 
-
 header{grid-area: header;
 background-color: black;}
-footer{grid-area: footer;
-min-height: 70px;
-position: relative;
-margin-top: 0px;
+
+footer{grid-area:footer;
+    min-height: 70px;
+    position: relative;
+    height: 80px;
 }
 section{grid-area: section;}
 
 
 
-/*empieza header*/
-
-
 .header{
-   
     width: 100%;
-    height:75px;
-    
+    height: 75px;
     position: fixed;
-    z-index:10;
-    padding-top:0;
-    padding-left:0;
-    box-shadow: 0px 1px 10px
-     rgba(0,0,0,0,4);}
+    z-index: 10;
+    padding-top: 0;
+    padding-left: 0;
+    box-shadow: 0px 1px 10px 
+    black;
+}
 
-     .container{
-         width: 98%;
-         max-width: 1200px;
-         margin:auto;
+.container{
+    width: 98%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-     }
+.logo{
+    float: left;
+    line-height: 75px;
 
-     .logo{
-         float:left;
-         line-height: 75px;
-     }
+    h1{color:$gold-1;
+        font-weight:400; 
+        font-size:24px;
+        cursor:default;
+}
+}
 
-     .logo h1{
-         color: var(--gold1);
-         font-weight:400; 
-         font-size:24px;
-         cursor:default;
-     }
-
-     .menu{
-         float: right;
-         line-height: 75px;
-
-     }
-     .menu a{
-         color:var(--gold2);
-         text-decoration:none;
-         display: inline-block;
-         padding: 10px 15px;
-         line-height:normal;
-         transition: all 500ms ease;
-         border-bottom: 4px solid transparent ;}
-
+.menu{
+    float:right;
+    line-height: 75px;
     
-     .menu a:hover{
-         color:  var(--gold1);
-         border-bottom: var(--gold1);}
-
-
-              /* estilos al boton del menu*/
-     #btn-menu{
-        display: none; }
-
-        .boton{
-            float:right;
-            display: none;}
-      
-
-        .boton label{
-            color: var(--black1);
-            background: var(--gold1);
-            padding:5px; 
-            font-size: 14px;
-            border-radius: 3px;
-            cursor: pointer;
-   
+    a{color:$gold-2 ;
+        text-decoration:none;
+        display: inline-block;
+        padding: 10px 15px;
+        line-height:normal;
+        transition: all 500ms ease;
+        border-bottom: 4px  transparent ;
+            &:hover{color: $gold-1;
+                    border-bottom:solid $gold-1;}
+            }
         }
 
+#btn-menu{
+            display: none; }
 
-
-/*empieza section*/
-
-.container_section{
-    width: 100%;
-    max-width: auto;
-    margin:0 auto;
-    overflow: hidden;
-    padding: 50px 0;
-    height:auto;
-    background-color: #1a1b1f;;
-    }
-
+.boton{
+                float:right;
+                display: none;
+}
     
-    .hero__main{
+.label{
+        color: $black1;
+        background: $black2;
+        padding:5px; 
+        font-size: 14px;
+        border-radius: 3px;
+        cursor: pointer;
+       
+            }
+        
+/*empieza section*/
+.container_section{
+            width: 100%;
+            max-width: auto;
+            margin:0 auto;
+            overflow: hidden;
+            padding: 50px 0;
+            height:auto;
+            background-color:$black1;
+            }
+
+
+  
+.hero__main{
         display: flex;
         height: 80vh;
         justify-content: space-between;
@@ -150,67 +119,67 @@ section{grid-area: section;}
         overflow: hidden;
     }
 .hero__textos{
-margin-left: 100px;
-}
-    .mockup{
-        object-fit: cover;
-        width: 56%;
-        max-height: 90vh;
+        margin-left: 100px;
         }
-    .title{
-        font-size: 56px;
-        font-weight: 300;
-        color: #fff;
-    }
-    
-    .title--active{
-        color: var(--gold1);
-        font-weight: 700;
-    }
-    
-    .copy{font-size: 24px;
-        color: var(--gray);
-        text-shadow: var(--shadow)  var(--color_shadow);
-        margin: 15px 0;
-    }
-    
-    .copy__active{
-        font-weight: 700;
-    }
-    
-    .cta{
-        padding: 20px 30px;
-        display: inline-block;
-        background: linear-gradient(180deg,#f7ce90 0,#f48d76 100%);
-        text-decoration: none;
-        color: var(--black2) #00000033;
-        border: radius 6px;
-        transition: height 10s,width 10s;
-    }
 
-    .cta:hover{
-transform: scale(0,5,2);
-color: white;
-font-size: larger;
-text-align: center;}
+.mockup{
+            object-fit: cover;
+            width: 56%;
+            max-height: 90vh;
+            }
 
-    /*empieza footer*/
+.title{
+    font-size: 56px;
+    font-weight: 300;
+    color: #fff;
+}
 
-    .pie-pagina{
+.title--active{
+    color: var(--gold1);
+    font-weight: 700;
+}
 
-        position: relative;
-        width: 100%;
-        background: #000000;
-        text-align: center;
-        bottom: 0;
-        box-shadow: 10px 0px 0px 1px
-         rgba(0,0,0,0,4);
-         margin-bottom: auto;
-         height: auto;
-       
-    
-    }
-    .pie-pagina .grupo-1{
+.copy{
+    font-size: 24px;
+    color: $gray;
+    text-shadow: $shadow $color_shadow;
+    margin: 15px 0;
+}
+
+.copy__active{
+    font-weight: 700;
+}
+
+.cta{
+    padding: 20px 30px;
+    display: inline-block;
+    background: linear-gradient(180deg,#f7ce90 0,$gold-1 100%);
+    text-decoration: none;
+    color: $black2;
+    border: radius 6px;
+    transition: height 10s,width 10s;
+        &:hover{transform: scale(0,5,2);
+            color: white;
+            font-size: larger;
+            text-align: center;}
+            
+
+}
+
+/*empieza footer*/
+
+.pie-pagina{
+
+    position: relative;
+    width: 100%;
+    background: #000000;
+    text-align: center;
+    bottom: 0;
+    box-shadow: 10px 0px 0px 1px
+    rgba(0,0,0,4);
+    margin-bottom: auto;
+    height: auto;
+.grupo-1{
         width: 100%;
         max-width: 1200px;
         margin: auto;
@@ -218,73 +187,65 @@ text-align: center;}
         grid-template-columns: repeat(3,1fr);
         grid-gap: 90px;
         padding: 10px 0px;
+        .box figure{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 100px;
+            
+            }
+        }
+
     
     } 
-    
-    .pie-pagina .grupo-1 .box figure{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-    
-    .pie-pagina .grupo-1 .box figure img{
-        width: 100px;
-    
-    }
-    
-    .pie-pagina .grupo-1 .box h2{
-        color: #fff;
-        margin-bottom: 25;
-        font-size: 20px;
-    }
-    
-    
-    .pie-pagina .grupo-1 .box p{
-        color: #efefef;
-        margin-bottom: 10px;
-    
-    }
-    .pie-pagina .grupo-1 .red-social a{
-        display: inline-block;
-        text-decoration: none;
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        color:#fff;
-        margin-right: 10px;
-        background-color: #0d2033;
-        text-align: center;
-    transition: all 500ms ease;
-    }
-    
-    .pie-pagina .grupo-1 .red-social a:hover{
-        color: rgb(30, 255, 0);
-    }
-    
-    .pie-pagina .grupo-2{
-        background-color: #000000;
-        padding:15 px 10px ;
-        text-align: center;
-        color:#fff
-    }
-    
-    .pie-pagina .grupo-2 small{
-        font-size: 15px;
-    }
+
+}
 
 
 
 
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25;
+    font-size: 20px;
+}
 
 
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
 
+}
 
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color:#fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+transition: all 500ms ease;
+&:hover{color:$gold-1 ;}
+}
 
+.pie-pagina .grupo-2{
+    background-color: #000000;
+    padding:15 px 10px ;
+    text-align: center;
+    color:#fff
+    
+    
+}
 
-
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
 
     /*SECTION DE LA PAGINA ABOUT US*/
 
@@ -292,7 +253,6 @@ text-align: center;}
         background: #ccbebe;
     
     }
-    
     .subtitle{
         font-size: 42px;
         
@@ -303,57 +263,52 @@ text-align: center;}
         color: #fff;
         margin-left: 68px;
     }
+    span.point{color: $gold-1;}
 
-    span.point{color: var(--gold1);}
-    
-   
-    
-    
     .copy__section{
-        color: var(--gold2);
+        color: $gold-2;
         font-size: 22px;
         line-height: 32px;
         margin-bottom: 60px;
-    }
-    p.copy_section{
-        color: var(--gold2);
-        margin-left: 68px;
-    }
-    .copy__section--modifier{
-        text-align: center;
-        margin-bottom: 32px;
-    }
     
-    .container-cards{
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
-    
-    .card{
-        width: 25%;
-        padding: 30px 10px;
-        overflow: hidden;
-        background:linear-gradient(180deg, #30353b 0%,#1a1b1f 100%);
-        border-radius: 10px;
-        position: relative;
-        text-align: right;
-        margin-bottom: 60px;
-        box-shadow: 0 0 6px var(--color_shadow);
-    
-    }
-    
-    .card__img{
-        text-align: left;
-        width: 95%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px 0 0 10px;
-    
-    }
-    
+        p{  color:$gold-2 ;
+        margin-left: 68px;}}
+
+.copy__section--modifier{
+    text-align: center;
+    margin-bottom: 32px;
+        }
+
+
+.container-cards{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+     
+.card{
+            width: 25%;
+            padding: 30px 10px;
+            overflow: hidden;
+            background:linear-gradient(180deg, #30353b 0%,#1a1b1f 100%);
+            border-radius: 10px;
+            position: relative;
+            text-align: right;
+            margin-bottom: 60px;
+            box-shadow: 0 0 6px $color_shadow;
+
+}
+.card__img{
+         text-align: left;
+            width: 95%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 0 0 10px;
+            
+            }
+
     .cards__text{
         text-align: left;
         width:90%;
@@ -374,7 +329,7 @@ text-align: center;}
     }
     
     .card__copy{
-        color: var(--gray2);
+        color: $gray2;
         margin-bottom: 16px;
     }
     
@@ -384,14 +339,14 @@ text-align: center;}
         border-radius: 6px;
         text-decoration: none;
         width: 100%;
-        color: var(--black1);
+        color: $black1;
         font-weight: 700;
         text-align: center;
         padding: 12px 0 ;
     }
     
     .card__date{
-        color: var(--gold2);
+        color: $gold-2;
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 16px;
@@ -404,9 +359,8 @@ text-align: center;}
         align-items: center;
         flex-wrap: nowrap;
     }
-    
-/*empieza projects*/
 
+    /*empieza projects*/
 
 
 h2.subtitle--modifier{
@@ -463,7 +417,7 @@ h2.subtitle--modifier{
     .testimony__card{
         width: 30%;
         height: 500px;
-        background: linear-gradient(180deg, #30353b 0%,#1a1b1f 100%);
+        background: linear-gradient(180deg, $black2 0%,$black1 100%);
         border-radius: 10px;
         position: relative;
         margin-bottom: 30px;
@@ -482,10 +436,10 @@ h2.subtitle--modifier{
         bottom: 20px;
         left: 5%;
         width: 90%;
-        background:linear-gradient(180deg, #30353b 0%,#1a1b1f 100%);
+        background:linear-gradient(180deg,$black2 0%,$black1 100%);
         color:#fff;
         border-radius: 10px;
-        box-shadow: var(--shadow) var(--color_shadow);
+        box-shadow: $shadow $color_shadow;
         padding: 15px 8px;
         display: flex;
         align-items: center;
@@ -509,7 +463,7 @@ h2.subtitle--modifier{
     }
     
     .testimony__position{
-        color: var(--gray);
+        color: $gray;
     }
     
     .testimony__text{
@@ -542,10 +496,7 @@ h2.subtitle--modifier{
         width: 70%;
     
     }
-    
-    
-    /*check*/
-    /*
+
     .check{
         display: flex;
         justify-content: space-evenly;
@@ -558,11 +509,11 @@ h2.subtitle--modifier{
         width: 30%;
         padding-right: 10px;
         display: flex;
-        border-right: 2px solid var(--black2);
+        border-right: 2px solid $black2;
     }
     
     .bx-check{
-        background:linear-gradient(180deg, #30353b 0%,#1a1b1f 100%);
+        background:linear-gradient(180deg, $black2 0%,$black1 100%);
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -606,7 +557,7 @@ h2.subtitle--modifier{
         outline: none;
         font-family: inherit;
         border-radius: 6px;
-        border: 1px solid var(--black1)
+        border: 1px solid $black1;
     
     }
     
@@ -615,7 +566,7 @@ h2.subtitle--modifier{
         right: 8px;
         top: 10%;
         height: 80%;
-        background:linear-gradient(180deg, #30353b 0%,#1a1b1f 100%) ;
+        background:linear-gradient(180deg, $black2 0%,$black1 100%) ;
         color: #fff;
         padding:0 15px ;
         border: none;
@@ -624,11 +575,11 @@ h2.subtitle--modifier{
         font-weight: 700;
         cursor: pointer;
     }
-*/
-    @media screen and (max-width:390px){
+
+ @media screen and (max-width:390px){
         .menu{
             position: absolute;
-            background:var(--black1);
+            background:$black1;
             width: 100%;
             height: 100vh;
             top: 60px;
@@ -687,5 +638,4 @@ p.copy_section{
     margin-top: 10px;
     margin-left: 0;
 }
-        }
-    
+}
