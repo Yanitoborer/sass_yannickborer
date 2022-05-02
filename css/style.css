@@ -17,8 +17,7 @@ header {
 footer {
   grid-area: footer;
   min-height: 70px;
-  position: relative;
-  height: 80px; }
+  position: relative; }
 
 section {
   grid-area: section; }
