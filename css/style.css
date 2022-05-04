@@ -8,6 +8,14 @@
   grid-template-areas: "header" "section" "footer";
   grid-template-rows: 100px auto 100px;
   grid-template-columns: auto;
+  height: 100vh;
+  background-color: #f4bd76; }
+
+#grilla1 {
+  display: grid;
+  grid-template-areas: "header" "section" "footer";
+  grid-template-rows: 100px auto 100px;
+  grid-template-columns: auto;
   height: 100vh; }
 
 header {
@@ -34,7 +42,8 @@ section {
 .container {
   width: 98%;
   max-width: 1200px;
-  margin: auto; }
+  margin: auto;
+  height: 600px; }
 
 .logo {
   float: left;
@@ -66,32 +75,39 @@ section {
 .boton {
   float: right;
   display: none; }
-
-.label {
-  color: #1a1b1f;
-  background: #30353b;
-  padding: 5px;
-  font-size: 14px;
-  border-radius: 3px;
-  cursor: pointer; }
+  .boton label {
+    color: #f4bd76;
+    background: #30353b;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer; }
 
 /*empieza section*/
 .container_section {
   width: 100%;
   max-width: auto;
   margin: 0 auto;
-  overflow: hidden;
-  padding: 50px 0;
-  height: auto;
+  overflow: scroll;
+  padding: 0;
+  height: 100vh;
   background-color: #1a1b1f; }
+
+.container_section--modifier {
+  background-color: #f4bd76;
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 .hero__main {
   display: flex;
-  height: 80vh;
-  justify-content: space-between;
+  height: 100vh;
+  justify-content: space-around;
   align-items: center;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  gap: 5px; }
 
 .hero__textos {
   margin-left: 100px; }
@@ -194,26 +210,30 @@ section {
 
 /*SECTION DE LA PAGINA ABOUT US*/
 .services {
-  background: #ccbebe; }
+  background-color: #f4bd76; }
 
 .subtitle {
   font-size: 42px; }
 
 h2.subtitle {
-  color: #fff;
-  margin-left: 68px; }
+  color: #1a1b1f;
+  margin-left: 0px; }
 
 span.point {
-  color: #f4bd76; }
+  color: #fff; }
 
-.copy__section {
-  color: #f6cd8f;
-  font-size: 22px;
+p.copy__section {
+  color: #1a1b1f;
+  margin-left: 0px;
+  font-size: 30px;
   line-height: 32px;
   margin-bottom: 60px; }
-  .copy__section p {
-    color: #f6cd8f;
-    margin-left: 68px; }
+
+p.copy__section1 {
+  color: #30353b;
+  font-size: 30px;
+  line-height: 32px;
+  margin-bottom: 60px; }
 
 .copy__section--modifier {
   text-align: center;
@@ -221,12 +241,14 @@ span.point {
 
 .container-cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 .card {
+  height: 500px;
   width: 25%;
   padding: 30px 10px;
   overflow: hidden;
@@ -249,11 +271,13 @@ span.point {
   width: 90%;
   margin: 0 auto; }
 
-.card__list {
-  color: var(--gold2);
-  font-weight: 700;
-  margin: 25px 0 12px;
-  font-size: 18px; }
+p {
+  color: #fff; }
+  p .card__list {
+    color: var(--gold2);
+    font-weight: 700;
+    margin: 25px 0 12px;
+    font-size: 18px; }
 
 .card__title {
   font-size: 40px;
@@ -265,6 +289,18 @@ span.point {
   margin-bottom: 16px; }
 
 .card__button {
+  display: block;
+  background: linear-gradient(180deg, #f7ce90 0, #f48d76 100%);
+  border-radius: 6px;
+  text-decoration: none;
+  width: 100%;
+  color: #1a1b1f;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 0; }
+
+.card__button1 {
+  transform: translateY(65px);
   display: block;
   background: linear-gradient(180deg, #f7ce90 0, #f48d76 100%);
   border-radius: 6px;
@@ -289,8 +325,9 @@ span.point {
 
 /*empieza projects*/
 h2.subtitle--modifier {
-  font-size: 42px;
-  color: #000000; }
+  font-size: 52px;
+  color: #000000;
+  margin-left: 0px; }
 
 .background {
   width: 68%;
@@ -320,7 +357,7 @@ h2.subtitle--modifier {
   margin-bottom: 4px; }
 
 .testimony {
-  background: #fafafa; }
+  background: #f4bd76; }
 
 .testimony-container {
   display: flex;
@@ -462,18 +499,25 @@ h2.subtitle--modifier {
   font-weight: 700;
   cursor: pointer; }
 
+section.projects_container {
+  background-color: #f4bd76;
+  width: 98%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
 @media screen and (max-width: 390px) {
   .menu {
     position: absolute;
     background: #1a1b1f;
     width: 100%;
-    height: 100vh;
+    height: 250vh;
     top: 60px;
     left: 0;
     transition: all 500ms ease;
     transform: translateX(-100%); }
   #btn-menu:checked ~ .menu {
-    transform: translateX(0%); }
+    transform: translateX(0%);
+    z-index: 1; }
   .menu a {
     display: block;
     margin-top: 10px; }
@@ -483,6 +527,8 @@ h2.subtitle--modifier {
     display: block;
     color: #dee9dd;
     border-bottom: 4px solid #030a02; }
+  article.container-cards {
+    margin-top: 0px; }
   .hero__main {
     display: flex;
     flex-direction: column-reverse; }
@@ -506,6 +552,28 @@ h2.subtitle--modifier {
   h2.subtitle {
     margin-left: 0px;
     font-size: 40px; }
-  p.copy_section {
+  p.copy_section1 {
     margin-top: 10px;
-    margin-left: 0; } }
+    margin-left: 0; }
+  .container-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative; }
+  .background__img {
+    width: 100%; }
+  p.copy__section {
+    margin-left: 0; }
+  #grilla1 {
+    height: 240vh;
+    background-color: #f4bd76; }
+  .testimony__card {
+    width: 80%;
+    margin: 20px auto; }
+  .card {
+    width: 80%;
+    margin: 20px auto;
+    height: 435px; }
+  .card__button {
+    transform: translateY(65px); } }
