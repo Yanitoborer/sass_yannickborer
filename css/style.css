@@ -292,6 +292,7 @@ section {
   font-size: 42px; }
 
 h2.subtitle {
+  font-size: 52px;
   color: #1a1b1f;
   margin-left: 0px; }
 
@@ -503,7 +504,7 @@ h2.subtitle--modifier {
   margin: 0 auto;
   color: #fff; }
 
-.google__logo {
+.motley__logo {
   width: 80px;
   margin-bottom: 20px; }
 
@@ -605,7 +606,8 @@ section.projects_container {
     transform: translateX(-100%); }
   #btn-menu:checked ~ .menu {
     transform: translateX(0%);
-    z-index: 1; }
+    z-index: 1;
+    height: 250vh; }
   .menu a {
     display: block;
     margin-top: 10px; }

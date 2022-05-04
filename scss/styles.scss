@@ -384,6 +384,7 @@ transition: all 500ms ease;
     }
 
     h2.subtitle{
+        font-size: 52px;
         color:$black1;
         margin-left: 0px;
         
@@ -633,7 +634,8 @@ h2.subtitle--modifier{
         margin:0 auto;
         color: #fff;
     }
-    .google__logo{
+    .motley__logo{
+       
         width: 80px;
         
         margin-bottom: 20px;
@@ -756,6 +758,7 @@ margin: 0 auto;}
             #btn-menu:checked ~ .menu{
                 transform: translateX(0%);
                 z-index: 1;
+                height: 250vh;
             }
  
             .menu a{
