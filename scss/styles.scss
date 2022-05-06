@@ -1,9 +1,10 @@
+
+
+
+
 *{margin:0;
 padding: 0;
 font-family: sans-serif;}
-
-
-
 
 $gold-1:#f4bd76;
 $gold-2:#f6cd8f;
@@ -264,13 +265,13 @@ transition: all 500ms ease;
     
 
 /*bodyLOGIN*/
-
 .body{margin: 0;
     padding: 0;
     background: url(/pictures/Capa-fondo-transparente.jpg) no-repeat center top;
     background-size: cover;
     font-family: sans-serif;
     height: 100vh;}
+
     
     .login-box{
         width: 320px;
@@ -542,7 +543,7 @@ h2.subtitle--modifier{
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
-        opacity: 0.5;
+        opacity: 0.9;
     }
     
     .background__text{
@@ -559,7 +560,7 @@ h2.subtitle--modifier{
     
     .background__title{
         font-size: 30px;
-        margin-bottom: 4px;
+        margin-bottom: 100px;
     }
     
     
@@ -743,7 +744,7 @@ h2.subtitle--modifier{
 max-width: 1200px;
 margin: 0 auto;}
 
- @media screen and (max-width:390px){
+ @media screen and (max-width:480px){
         .menu{
             position: absolute;
             background:$black1;
@@ -788,7 +789,7 @@ margin: 0 auto;}
     .mockup{width: 80%;}
 
     .services .card{
-            width: 95%;
+            width: 80%;
         }
     
 .background{
@@ -830,7 +831,9 @@ p.copy__section{
     height: 240vh;
     background-color: $gold-1;
 }
-.testimony__card{width: 80%;
+.testimony__card{
+    height: 450px;
+    width: 80%;
 margin: 20px auto;}
 
 .card{
@@ -839,4 +842,6 @@ margin: 20px auto;}
     height: 435px;
 }
 .card__button{ transform: translateY(65px);}
+
+.container_section--modifier{height: 230vh;}
 }

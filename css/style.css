@@ -429,7 +429,7 @@ h2.subtitle--modifier {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  opacity: 0.5; }
+  opacity: 0.9; }
 
 .background__text {
   position: absolute;
@@ -442,7 +442,7 @@ h2.subtitle--modifier {
 
 .background__title {
   font-size: 30px;
-  margin-bottom: 4px; }
+  margin-bottom: 100px; }
 
 .testimony {
   background: #f4bd76; }
@@ -593,7 +593,7 @@ section.projects_container {
   max-width: 1200px;
   margin: 0 auto; }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 480px) {
   .menu {
     position: absolute;
     background: #1a1b1f;
@@ -628,7 +628,7 @@ section.projects_container {
   .mockup {
     width: 80%; }
   .services .card {
-    width: 95%; }
+    width: 80%; }
   .background {
     width: 95%; }
   .card {
@@ -658,6 +658,7 @@ section.projects_container {
     height: 240vh;
     background-color: #f4bd76; }
   .testimony__card {
+    height: 450px;
     width: 80%;
     margin: 20px auto; }
   .card {
@@ -665,4 +666,6 @@ section.projects_container {
     margin: 20px auto;
     height: 435px; }
   .card__button {
-    transform: translateY(65px); } }
+    transform: translateY(65px); }
+  .container_section--modifier {
+    height: 230vh; } }
